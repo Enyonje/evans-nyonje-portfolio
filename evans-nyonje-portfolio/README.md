@@ -24,3 +24,19 @@ The portfolio intentionally links to source repositories rather than claiming un
 Open `admin.html` in the same browser as the portfolio to manage profile photos, project screenshots, gallery images and YouTube demos. Media is stored locally in that browser using IndexedDB. Use **Export backup** to save your media data and **Import backup** to restore it.
 
 **Publishing limitation:** this static version does not sync uploads to a public cloud server. Media added in the manager appears in the portfolio in that same browser only. To publish uploads for all visitors, connect a cloud media service/backend and admin authentication before using the manager on a public deployment.
+
+
+## SEO files included
+
+- `robots.txt` allows search engines to crawl the public portfolio and points to the sitemap.
+- `sitemap.xml` lists the canonical homepage.
+- The homepage includes a canonical URL, social-sharing metadata and Person/WebSite structured data.
+- `favicon.svg` supplies a lightweight browser icon.
+
+After deploying these changes:
+1. Open Google Search Console and add `evansnyonje.nexusthecore.com` as a URL-prefix property.
+2. Verify ownership using the HTML tag or DNS method provided by Search Console. If using the HTML tag method, add the exact verification meta tag to `index.html` before deploying.
+3. In Search Console, submit `https://evansnyonje.nexusthecore.com/sitemap.xml`.
+4. Use URL Inspection for the homepage and request indexing.
+
+The sitemap and canonical metadata use `https://evansnyonje.nexusthecore.com/`. Update both if the public domain changes.
